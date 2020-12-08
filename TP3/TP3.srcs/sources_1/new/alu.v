@@ -22,7 +22,7 @@
 module alu#(
         //Parameters
         parameter   N_BITS = 16,
-        parameter   N_BITS_ALU = 8
+        parameter   N_BITS_ALU = 5
     )    
     (
         //Inputs
@@ -38,14 +38,10 @@ module alu#(
    
     always@(*)
         case(operacion)
-            8'b00100000 : out = datoA + datoB;
-            8'b00100010 : out = datoA - datoB;
-            8'b00100100 : out = datoA & datoB;
-            8'b00100101 : out = datoA | datoB;
-            8'b00100110 : out = datoA ^ datoB;
-            8'b00000011 : out = datoA >> datoB;
-            8'b00000010 : out = datoA << datoB;
-            8'b00100111 : out = ~(datoA | datoB);
+            5'b00100 : out = datoA + datoB;
+            5'b00101 : out = datoA + datoB;
+            5'b00110 : out = datoA - datoB;
+            5'b00111 : out = datoA - datoB;
             default : out = 0; 
         endcase
        

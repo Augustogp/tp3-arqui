@@ -33,10 +33,15 @@ module ACC#(
         output  reg    [N_BITS - 1 : 0]    o_acc
     );
     
+    reg     [N_BITS - 1 : 0]    acc;
+        
     always@(posedge i_clock)
         if(enable)
         begin
             o_acc <= i_data;
         end
-       
+        else 
+        begin
+            o_acc <= o_acc;     
+        end   
 endmodule

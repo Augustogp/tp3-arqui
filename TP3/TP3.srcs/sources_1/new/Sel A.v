@@ -28,23 +28,24 @@ module Sel_A#(
         //Inputs
         input   wire    [N_BITS - 1 : 0]    i_alu,
         input   wire    [N_BITS - 1 : 0]    i_se,
-        input   wire    [N_BITS - 1 : 0]    i_mem,
+        input   wire    [N_BITS - 1 : 0]    i_dataMem,
         input   wire    [1 : 0]             selA,
 
         //Outputs
         output  reg    [N_BITS - 1 : 0]    o_data
     );
     
-    always@(*)
+    always@(*) begin
         case(selA)
             2'b00:
-                o_data = i_alu;
+                o_data = i_dataMem;
             2'b01:
                 o_data = i_se;
             2'b10:
-                o_data = i_mem;
+                o_data = i_alu;
             default:
                 o_data = 1'b0;
         endcase
+    end
        
 endmodule

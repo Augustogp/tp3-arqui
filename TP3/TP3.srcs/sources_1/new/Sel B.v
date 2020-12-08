@@ -27,21 +27,22 @@ module Sel_B#(
     (
         //Inputs
         input   wire    [N_BITS - 1 : 0]    i_se,
-        input   wire    [N_BITS - 1 : 0]    i_mem,
+        input   wire    [N_BITS - 1 : 0]    i_dataMem,
         input   wire                        selB,
 
         //Outputs
         output  reg    [N_BITS - 1 : 0]    o_data
     );
     
-    always@(*)
+    always@(*) begin
         case(selB)
             1'b0:
-                o_data = i_se;
+                o_data = i_dataMem;
             1'b1:
-                o_data = i_mem;
+                o_data = i_se;
             default:
                 o_data = 1'b0;
         endcase
+    end
        
 endmodule
