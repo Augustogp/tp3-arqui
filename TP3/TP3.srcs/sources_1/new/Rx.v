@@ -29,7 +29,7 @@ module Rx#(
         parameter [2:0]    IDLE    =   2'b00,
         parameter [2:0]    DATA    =   2'b01,
         parameter [2:0]    STOP    =   2'b10,
-        parameter   N_BITS = 8,
+        parameter   N_BITS = 16,
         parameter   N_BITS_P = 4
     )
     (

@@ -40,7 +40,7 @@ module Instruction_Decoder#(
         output  reg    [1 : 0]                 o_SelA,
         output  reg                            o_SelB,
         output  reg                            o_WrAcc,
-        output  reg                            o_Op, // Ver si es lo mismo que la operacion que entra
+        output  reg    [N_BITS_OPCODE - 1 : 0] o_Op, // Ver si es lo mismo que la operacion que entra
         output  reg                            o_WrRam,
         output  reg                            o_RdRam
     );

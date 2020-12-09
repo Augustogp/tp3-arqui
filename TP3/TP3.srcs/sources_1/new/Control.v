@@ -31,13 +31,13 @@ module Control#(
         input   wire    i_reset_c,
         input   wire    [N_BITS_OPCODE - 1 : 0]    i_Opcode_control,
         //Outputs
-        output  reg    [1 : 0]                  o_SelA,
-        output  reg                             o_SelB,
-        output  reg                             o_WrAcc,
-        output  reg    [N_BITS_OPCODE - 1 : 0]  o_Op, // Ver si es lo mismo que la operacion que entra
-        output  reg                             o_WrRam,
-        output  reg                             o_RdRam,
-        output  reg    [N_BITS_PC - 1 : 0]      o_Addr 
+        output  wire    [1 : 0]                  o_SelA,
+        output  wire                             o_SelB,
+        output  wire                             o_WrAcc,
+        output  wire    [N_BITS_OPCODE - 1 : 0]  o_Op, // Ver si es lo mismo que la operacion que entra
+        output  wire                             o_WrRam,
+        output  wire                             o_RdRam,
+        output  wire    [N_BITS_PC - 1 : 0]      o_Addr 
     );
     
     wire                            wire_WrPc;
@@ -52,7 +52,7 @@ module Control#(
     Instruction_Decoder Instruction_Decoder(
         .i_opcode(i_Opcode_control),
         .o_WrPc(wire_WrPc),
-        .o_SelA(o_selA),
+        .o_SelA(o_SelA),
         .o_SelB(o_SelB),
         .o_WrAcc(o_WrAcc),
         .o_Op(o_Op),

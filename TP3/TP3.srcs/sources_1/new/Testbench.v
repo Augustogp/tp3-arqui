@@ -31,7 +31,7 @@ module Testbench#(
         
         reg     i_clock_tb;
         reg     i_reset_tb;
-        reg     dout_rx_tb;
+        wire   [N_BITS-1:0]  dout_rx_tb;
         wire    wire_tx_rx;
         wire    tick_tb;
         wire    rx_done_tick_tb;
@@ -39,15 +39,16 @@ module Testbench#(
         initial begin
             #10
             i_reset_tb = 1;
-            #100
+            #1000
             i_reset_tb = 0;
             #100
             i_clock_tb = 1;
         end
         
-        always@(posedge i_clock_tb) begin 
+        always
+            #20 
             i_clock_tb = ~i_clock_tb;
-        end
+        
         
         always@(*) begin
             if(rx_done_tick_tb) begin

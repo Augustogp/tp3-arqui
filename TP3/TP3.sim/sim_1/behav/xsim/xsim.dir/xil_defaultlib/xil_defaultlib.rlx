@@ -1,0 +1,23 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/ACC.v,1607552429,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Control.v,,ACC,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Control.v,1607555718,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Data Memory.v,,Control,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Data Memory.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Datapath.v,,Data_Memory,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Datapath.v,1607552429,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Instruction Decoder.v,,Datapath,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Instruction Decoder.v,1607555535,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/PC.v,,Instruction_Decoder,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/PC.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Program Memory.v,,PC,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Program Memory.v,1607554935,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Rx.v,,Program_Memory,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Rx.v,1607555623,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Sel A.v,,Rx,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Sel A.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Sel B.v,,Sel_A,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Sel B.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Signal_Extension.v,,Sel_B,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Signal_Extension.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/TOP.v,,Signal_Extension,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/TOP.v,1607552429,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Tx.v,,TOP,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/TestBench_ProgramMemory.v,1607554761,verilog,,,,TestBench_ProgramMemory,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Testbench.v,1607556663,verilog,,,,Testbench,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Tx.v,1607555548,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/alu.v,,Tx,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/alu.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen.v,,alu,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen.v,1607525892,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen_2.v,,baud_rate_gen,,,,,,,,
+C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen_2.v,1607552429,verilog,,C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.srcs/sources_1/new/Testbench.v,,baud_rate_gen_2,,,,,,,,
