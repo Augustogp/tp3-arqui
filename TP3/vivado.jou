@@ -2,33 +2,16 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Dec  8 12:43:08 2020
-# Process ID: 13980
+# Start of session at: Wed Dec  9 13:03:47 2020
+# Process ID: 14236
 # Current directory: C:/Users/Facu Bosack/Documents/tp3-arqui/TP3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2584 C:\Users\Facu Bosack\Documents\tp3-arqui\TP3\TP3.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4860 C:\Users\Facu Bosack\Documents\tp3-arqui\TP3\TP3.xpr
 # Log file: C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/vivado.log
 # Journal file: C:/Users/Facu Bosack/Documents/tp3-arqui/TP3\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.xpr}
 update_compile_order -fileset sources_1
-close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Control.v} w ]
-add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Control.v}}
-update_compile_order -fileset sources_1
-close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Datapath.v} w ]
-add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Datapath.v}}
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Signal Extension.v}}] -no_script -reset -force -quiet
-remove_files  {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Signal Extension.v}}
-close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Signal_Extension.v} w ]
-add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Signal_Extension.v}}
-update_compile_order -fileset sources_1
-close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Tx.v} w ]
-add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Tx.v}}
-update_compile_order -fileset sources_1
-close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen.v} w ]
-add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen.v}}
-update_compile_order -fileset sources_1
-close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/TOP.v} w ]
-add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/TOP.v}}
+close [ open {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Testbench.v} w ]
+add_files {{C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Testbench.v}}
 update_compile_order -fileset sources_1

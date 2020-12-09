@@ -31,7 +31,8 @@ module TOP#(
     (
         input   wire                        i_clock_top,
         input   wire                        i_reset_top,
-        input   wire    [N_BITS - 1 : 0]    i_instruction
+        output  wire                        o_dout_tx_top,
+        output  wire                        o_tx_done_top
             
     );
     
@@ -49,12 +50,15 @@ module TOP#(
     wire    [N_BITS_PC - 1 : 0]         wire_proMemAddr;
     wire    [N_BITS - 1 : 0]            wire_OutProgMem;
     wire                                wire_tick;
+    wire    [N_BITS - 1 : 0]            i_instruction;
     
     reg     [N_BITS - 1 : 0]            reg_Program_Control;
     reg     [N_BITS - 1 : 0]            reg_Program_Datapath;
     
     wire    [N_BITS_OPCODE - 1 : 0]     wire_Program_Control;
     wire    [N_BITS_PC - 1 : 0]         wire_Program_Datapath;
+    
+    reg                                 tx_start_top;
     
     assign  wire_Program_Control = reg_Program_Control;
     assign  wire_Program_Datapath = reg_Program_Datapath;
@@ -65,7 +69,15 @@ module TOP#(
         reg_Program_Datapath    =  i_instruction & 16'b0000011111111111; // Para que quede el operando   
     end
     
-    //Faltaria un codigo que haga la parte de enviar los datos por el transmisor (o ver).
+    always@(*) begin 
+        if( reg_Program_Control == 5'b00000) begin // Aca entraria la instruccion HALT
+            tx_start_top = 1'b1;
+        end
+        else begin
+            tx_start_top = 1'b0;
+        end
+        
+    end
     
     Control Control(
         .i_clock_c(i_clock_top),
@@ -111,11 +123,11 @@ module TOP#(
     Tx Tx(
         .s_tick(wire_tick),
         .tx(wire_IndataMem),    // La entrada del transmisor va a ser la salida del acumulador 
-        .tx_start(),            //Falta el tx start, se tiene que pasar cuando se terminen las instrucciones
+        .tx_start(tx_start_top),            //Falta el tx start, se tiene que pasar cuando se terminen las instrucciones
         .i_clock(i_clock_top),
         .i_reset(i_reset_top),
-        .dout_tx(),
-        .o_tx_done()
+        .dout_tx(o_dout_tx_top), //La salida del tx es la entrada del receptor externo
+        .o_tx_done(o_tx_done_top)
     );
     
     baud_rate_gen baud_rate_gen(

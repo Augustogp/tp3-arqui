@@ -27,6 +27,7 @@ module ACC#(
         //Inputs
         input   wire    [N_BITS - 1 : 0]    i_data,
         input   wire                        i_clock,
+        input   wire                        i_reset,
         input   wire                        enable,
 
         //Outputs
@@ -35,13 +36,18 @@ module ACC#(
     
     reg     [N_BITS - 1 : 0]    acc;
         
-    always@(posedge i_clock)
-        if(enable)
-        begin
-            o_acc <= i_data;
+    always@(negedge i_clock)
+        if(i_reset) begin
+            o_acc <= 0;
         end
-        else 
-        begin
-            o_acc <= o_acc;     
-        end   
+        else begin
+            if(enable)
+            begin
+                o_acc <= i_data;
+            end
+            else 
+            begin
+                o_acc <= o_acc;     
+            end
+        end       
 endmodule

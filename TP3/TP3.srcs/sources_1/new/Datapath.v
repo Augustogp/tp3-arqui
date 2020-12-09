@@ -64,6 +64,7 @@ module Datapath#(
     ACC ACC(
         .i_data(wire_selA_Acc),
         .i_clock(i_clock_D),
+        .i_reset(i_reset_D),
         .enable(i_WrAcc),
 
         .o_acc(wire_Acc_Alu)

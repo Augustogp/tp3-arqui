@@ -145,6 +145,6 @@ module Tx#(
     end
     
     //Instanciacion de modulos
-    baud_rate_gen baud_rate_gen(.o_tick(s_tick));
+    baud_rate_gen baud_rate_gen(.o_tick(s_tick), .i_clock(i_clock), .i_reset(i_reset));
     
 endmodule
