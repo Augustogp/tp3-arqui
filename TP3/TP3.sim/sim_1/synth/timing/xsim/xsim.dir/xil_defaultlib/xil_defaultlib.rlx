@@ -1,0 +1,8 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.sim/sim_1/synth/timing/xsim/Testbench_time_synth.v,1607617290,verilog,,C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Rx.v,,ACC;Control;Data_Memory;Datapath;PC;Program_Memory;RAM32X1S_HD1;RAM32X1S_HD10;RAM32X1S_HD11;RAM32X1S_HD12;RAM32X1S_HD13;RAM32X1S_HD14;RAM32X1S_HD15;RAM32X1S_HD2;RAM32X1S_HD3;RAM32X1S_HD4;RAM32X1S_HD5;RAM32X1S_HD6;RAM32X1S_HD7;RAM32X1S_HD8;RAM32X1S_HD9;RAM32X1S_UNIQ_BASE_;TOP;Tx;alu;baud_rate_gen;glbl,,,,,,,,
+C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Rx.v,1607615781,verilog,,C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen_2.v,,Rx,,,,,,,,
+C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Testbench.v,1607615677,verilog,,,,Testbench,,,,,,,,
+C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/baud_rate_gen_2.v,1607550706,verilog,,C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.srcs/sources_1/new/Testbench.v,,baud_rate_gen_2,,,,,,,,

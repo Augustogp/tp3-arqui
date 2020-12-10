@@ -43,9 +43,7 @@ module TestBench_PC#(
         #20
         reset_tb = 1'b1;
         #20
-        reset_tb = 1'b0;
-        #20
-        clock_tb 
+        reset_tb = 1'b0; 
     end
     
 endmodule

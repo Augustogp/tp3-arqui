@@ -1,0 +1,318 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 1308
+License: Customer
+
+Current time: 	Thu Dec 10 11:10:01 ART 2020
+Time zone: 	Argentina Standard Time (America/Buenos_Aires)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Facu Bosack
+User home directory: C:/Users/Facu Bosack
+User working directory: C:/Users/Facu Bosack/Documents/tp3-arqui/TP3
+User country: 	AR
+User language: 	es
+User locale: 	es_AR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.1
+RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/Facu Bosack/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/Facu Bosack/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/Facu Bosack/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/vivado.log
+Vivado journal file location: 	C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/vivado.jou
+Engine tmp dir: 	C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/.Xil/Vivado-1308-DESKTOP-LCI0P6N
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,023 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1046 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 93 MB (+95327kb) [00:00:43]
+// [Engine Memory]: 1,023 MB (+920775kb) [00:00:43]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Facu Bosack\Documents\tp3-arqui\TP3\TP3.xpr. Version: Vivado v2020.1 
+// WARNING: HEventQueue.dispatchEvent() is taking  1348 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 51 MB. Current time: 12/10/20, 11:10:02 AM ART
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Facu Bosack/Documents/tp3-arqui/TP3/TP3.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/augus/Documents/Git/tp3-arqui/TP3' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 103 MB (+5729kb) [00:01:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  6857 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'. 
+// Project name: TP3; location: C:/Users/Facu Bosack/Documents/tp3-arqui/TP3; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:43 . Memory (MB): peak = 1018.941 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// [GUI Memory]: 114 MB (+5989kb) [00:01:30]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 126 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Control : Control (Control.v)]", 3); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Datapath : Datapath (Datapath.v)]", 6); // B (F, cs)
+// PAPropertyPanels.initPanels (ACC.v) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Datapath : Datapath (Datapath.v), ACC : ACC (ACC.v)]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Datapath : Datapath (Datapath.v), ACC : ACC (ACC.v)]", 9, false, false, false, false, false, true); // B (F, cs) - Double Click
+// [GUI Memory]: 126 MB (+5980kb) [00:03:39]
+// [GUI Memory]: 132 MB (+366kb) [00:06:29]
+// Elapsed time: 650 seconds
+selectCodeEditor("ACC.v", 156, 318); // bP (w, cs)
+selectCodeEditor("ACC.v", 133, 322); // bP (w, cs)
+selectCodeEditor("ACC.v", 149, 321); // bP (w, cs)
+selectCodeEditor("ACC.v", 229, 260); // bP (w, cs)
+selectCodeEditor("ACC.v", 229, 260, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 300 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Data_Memory : Data_Memory (Data Memory.v)]", 12, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Data_Memory : Data_Memory (Data Memory.v)]", 12, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 70 seconds
+selectCodeEditor("Data Memory.v", 171, 308); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 171, 308, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Data Memory.v", 227, 105); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 227, 105, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Data Memory.v", 167, 364); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 167, 364, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Data Memory.v", 189, 380); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 189, 380, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Data Memory.v", 174, 362); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 174, 362, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Data Memory.v", 134, 373); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 134, 373, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("Data Memory.v", 250, 369); // bP (w, cs)
+selectCodeEditor("Data Memory.v", 250, 369, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v)]", 2, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectCodeEditor("TOP.v", 143, 236); // bP (w, cs)
+selectCodeEditor("TOP.v", 142, 239); // bP (w, cs)
+selectCodeEditor("TOP.v", 142, 239, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data Memory.v", 2); // m (l, cs)
+selectCodeEditor("Data Memory.v", 283, 218); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 75 MB. Current time: 12/10/20, 11:40:03 AM ART
+// Elapsed time: 895 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 146 seconds
+selectCodeEditor("Testbench.v", 231, 248); // bP (w, cs)
+selectCodeEditor("Testbench.v", 231, 248, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 62 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v)]", 2); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Tx : Tx (Tx.v)]", 14, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), TOP : TOP (TOP.v), Tx : Tx (Tx.v)]", 14, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 22 seconds
+selectCodeEditor("Tx.v", 222, 203); // bP (w, cs)
+selectCodeEditor("Tx.v", 226, 224); // bP (w, cs)
+selectCodeEditor("Tx.v", 226, 224, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 227, 215); // bP (w, cs)
+selectCodeEditor("Tx.v", 227, 215, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 103 seconds
+selectCodeEditor("Tx.v", 171, 219); // bP (w, cs)
+selectCodeEditor("Tx.v", 199, 132); // bP (w, cs)
+selectCodeEditor("Tx.v", 199, 132, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("Tx.v", 305, 298); // bP (w, cs)
+selectCodeEditor("Tx.v", 327, 294); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("Tx.v", 163, 337); // bP (w, cs)
+selectCodeEditor("Tx.v", 163, 337, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("Tx.v", 171, 100); // bP (w, cs)
+selectCodeEditor("Tx.v", 171, 100); // bP (w, cs)
+selectCodeEditor("Tx.v", 171, 100, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("Tx.v", 276, 241); // bP (w, cs)
+selectCodeEditor("Tx.v", 180, 145); // bP (w, cs)
+selectCodeEditor("Tx.v", 134, 99); // bP (w, cs)
+selectCodeEditor("Tx.v", 143, 91); // bP (w, cs)
+selectCodeEditor("Tx.v", 145, 90, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 30 seconds
+selectCodeEditor("Tx.v", 154, 193); // bP (w, cs)
+selectCodeEditor("Tx.v", 154, 193, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 28 seconds
+selectCodeEditor("Tx.v", 250, 97); // bP (w, cs)
+selectCodeEditor("Tx.v", 250, 97, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 240 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), Rx : Rx (Rx.v)]", 17, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Testbench (Testbench.v), Rx : Rx (Rx.v)]", 17, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("Rx.v", 171, 297); // bP (w, cs)
+selectCodeEditor("Rx.v", 171, 297, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("Rx.v", 299, 165); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("Rx.v", 237, 301); // bP (w, cs)
+selectCodeEditor("Rx.v", 237, 301, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("Rx.v", 299, 180); // bP (w, cs)
+selectCodeEditor("Rx.v", 301, 179, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 51 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Tx.v", 5); // m (l, cs)
+// Elapsed time: 55 seconds
+selectCodeEditor("Tx.v", 215, 261); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("Tx.v", 222, 256); // bP (w, cs)
+selectCodeEditor("Tx.v", 222, 256, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 37 seconds
+selectCodeEditor("Tx.v", 214, 301); // bP (w, cs)
+selectCodeEditor("Tx.v", 214, 301, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 145 seconds
+selectCodeEditor("Tx.v", 201, 119); // bP (w, cs)
+selectCodeEditor("Tx.v", 201, 119, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 201, 114); // bP (w, cs)
+selectCodeEditor("Tx.v", 201, 114, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 397, 177); // bP (w, cs)
+selectCodeEditor("Tx.v", 227, 231); // bP (w, cs)
+// Elapsed time: 94 seconds
+selectCodeEditor("Tx.v", 112, 121); // bP (w, cs)
+selectCodeEditor("Tx.v", 154, 28); // bP (w, cs)
+selectCodeEditor("Tx.v", 154, 28, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 198 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Testbench.v", 4); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.v", 3); // m (l, cs)
+selectCodeEditor("TOP.v", 201, 319); // bP (w, cs)
+selectCodeEditor("TOP.v", 197, 342); // bP (w, cs)
+selectCodeEditor("TOP.v", 92, 318); // bP (w, cs)
+selectCodeEditor("TOP.v", 143, 333); // bP (w, cs)
+selectCodeEditor("TOP.v", 76, 344); // bP (w, cs)
+selectCodeEditor("TOP.v", 94, 401); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 67 MB. Current time: 12/10/20, 12:10:03 PM ART
+selectCodeEditor("TOP.v", 91, 240); // bP (w, cs)
+selectCodeEditor("TOP.v", 90, 246); // bP (w, cs)
+selectCodeEditor("TOP.v", 90, 246, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("TOP.v", 83, 249); // bP (w, cs)
+selectCodeEditor("TOP.v", 91, 245); // bP (w, cs)
+selectCodeEditor("TOP.v", 91, 244, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("TOP.v", 162, 248); // bP (w, cs)
+selectCodeEditor("TOP.v", 141, 262); // bP (w, cs)
+selectCodeEditor("TOP.v", 141, 262, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("TOP.v", 88, 243); // bP (w, cs)
+selectCodeEditor("TOP.v", 89, 243, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("TOP.v", 100, 249); // bP (w, cs)
+selectCodeEditor("TOP.v", 93, 252); // bP (w, cs)
+selectCodeEditor("TOP.v", 100, 266); // bP (w, cs)
+selectCodeEditor("TOP.v", 100, 266, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("TOP.v", 190, 303); // bP (w, cs)
+selectCodeEditor("TOP.v", 149, 335); // bP (w, cs)
+// Elapsed time: 103 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Tx.v", 5); // m (l, cs)
+selectCodeEditor("Tx.v", 259, 238); // bP (w, cs)
+selectCodeEditor("Tx.v", 259, 238, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 261, 235); // bP (w, cs)
+selectCodeEditor("Tx.v", 261, 235); // bP (w, cs)
+selectCodeEditor("Tx.v", 271, 229); // bP (w, cs)
+// Elapsed time: 73 seconds
+selectCodeEditor("Tx.v", 287, 200); // bP (w, cs)
+selectCodeEditor("Tx.v", 287, 200, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 177 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Rx.v", 6); // m (l, cs)
+selectCodeEditor("Rx.v", 292, 158); // bP (w, cs)
+selectCodeEditor("Rx.v", 305, 193); // bP (w, cs)
+selectCodeEditor("Rx.v", 305, 193, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Rx.v", 272, 200); // bP (w, cs)
+selectCodeEditor("Rx.v", 231, 198); // bP (w, cs)
+selectCodeEditor("Rx.v", 231, 198, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Rx.v", 218, 226); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Tx.v", 5); // m (l, cs)
+// Elapsed time: 70 seconds
+selectCodeEditor("Tx.v", 253, 223); // bP (w, cs)
+selectCodeEditor("Tx.v", 253, 223, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 53 seconds
+selectCodeEditor("Tx.v", 239, 340); // bP (w, cs)
+selectCodeEditor("Tx.v", 239, 374); // bP (w, cs)
+selectCodeEditor("Tx.v", 239, 399); // bP (w, cs)
+selectCodeEditor("Tx.v", 221, 186); // bP (w, cs)
+selectCodeEditor("Tx.v", 221, 186, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 217, 188); // bP (w, cs)
+selectCodeEditor("Tx.v", 217, 188, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 233, 276); // bP (w, cs)
+selectCodeEditor("Tx.v", 233, 276, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 123 seconds
+selectCodeEditor("Tx.v", 259, 47); // bP (w, cs)
+selectCodeEditor("Tx.v", 257, 47, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 259, 53); // bP (w, cs)
+selectCodeEditor("Tx.v", 259, 53, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("Tx.v", 259, 53); // bP (w, cs)
+// Elapsed time: 327 seconds
+selectCodeEditor("Tx.v", 385, 349); // bP (w, cs)
+selectCodeEditor("Tx.v", 297, 163); // bP (w, cs)
+selectCodeEditor("Tx.v", 253, 367); // bP (w, cs)
+typeControlKey((HResource) null, "Tx.v", 'v'); // bP (w, cs)
+selectCodeEditor("Tx.v", 278, 126); // bP (w, cs)
+// Elapsed time: 37 seconds
+selectCodeEditor("Tx.v", 264, 132); // bP (w, cs)
+// Elapsed time: 29 seconds
+typeControlKey((HResource) null, "Tx.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "Tx.v", 'c'); // bP (w, cs)
+// Elapsed time: 27 seconds
+selectCodeEditor("Tx.v", 248, 122); // bP (w, cs)
+// Elapsed time: 240 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Rx.v", 6); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Tx.v", 5); // m (l, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Rx.v", 6); // m (l, cs)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 419ms to process. Increasing delay to 3000 ms.

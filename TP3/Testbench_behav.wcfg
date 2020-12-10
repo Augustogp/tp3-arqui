@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1686630991fs"></ZoomStartTime>
-      <ZoomEndTime time="1770330992fs"></ZoomEndTime>
-      <Cursor1Time time="1730530991fs"></Cursor1Time>
+      <ZoomStartTime time="942683fs"></ZoomStartTime>
+      <ZoomEndTime time="1255111fs"></ZoomEndTime>
+      <Cursor1Time time="2000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="136"></NameColumnWidth>
+      <NameColumnWidth column_width="132"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="49" />
+   <WVObjectSize size="50" />
    <wvobject fp_name="/Testbench/i_clock_tb" type="logic">
       <obj_property name="ElementShortName">i_clock_tb</obj_property>
       <obj_property name="ObjectShortName">i_clock_tb</obj_property>
@@ -305,6 +305,13 @@
       <obj_property name="ObjectShortName">rx_done_tick</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/Rx/bit_count" type="array">
+      <obj_property name="ElementShortName">bit_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_count[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Testbench/Rx/dout" type="array">
       <obj_property name="ElementShortName">dout[15:0]</obj_property>

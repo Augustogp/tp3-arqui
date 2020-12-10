@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"Testbench_time_synth.v" \
+"../../../../../TP3.srcs/sources_1/new/Rx.v" \
+"../../../../../TP3.srcs/sources_1/new/baud_rate_gen_2.v" \
+"../../../../../TP3.srcs/sources_1/new/Testbench.v" \
+
+# Do not sort compile order
+nosort
