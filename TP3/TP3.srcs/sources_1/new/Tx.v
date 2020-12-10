@@ -96,17 +96,25 @@ module Tx#(
                         begin
                             next_estado = DATA; //Sigue siendo DATA porque talvez necesite mas bits
                             case(bit_count)                                    
-                                4'b0000 : dout_tx = tx >> 7;            
-                                4'b0001 : dout_tx = tx >> 6;            
-                                4'b0010 : dout_tx = tx >> 5;    
-                                4'b0011 : dout_tx = tx >> 4; 
-                                4'b0100 : dout_tx = tx >> 3;
-                                4'b0101 : dout_tx = tx >> 2;
-                                4'b0110 : dout_tx = tx >> 1;
-                                4'b0111 : dout_tx = tx;
+                                4'b0000 : dout_tx = tx >> 15;            
+                                4'b0001 : dout_tx = tx >> 14;            
+                                4'b0010 : dout_tx = tx >> 13;    
+                                4'b0011 : dout_tx = tx >> 12; 
+                                4'b0100 : dout_tx = tx >> 11;
+                                4'b0101 : dout_tx = tx >> 10;
+                                4'b0110 : dout_tx = tx >> 9;
+                                4'b0111 : dout_tx = tx >> 8;
+                                4'b1000 : dout_tx = tx >> 7;            
+                                4'b1001 : dout_tx = tx >> 6;            
+                                4'b1010 : dout_tx = tx >> 5;    
+                                4'b1011 : dout_tx = tx >> 4; 
+                                4'b1100 : dout_tx = tx >> 3;
+                                4'b1101 : dout_tx = tx >> 2;
+                                4'b1110 : dout_tx = tx >> 1;
+                                4'b1111 : dout_tx = tx;
                                 default : dout_tx = 0;
                             endcase
-                            if(bit_count == 3'b111) //Si es 7 bit count significa que ya paso los 8 bits.
+                            if(bit_count == (N_BITS-1)) //Si es 7 bit count significa que ya paso los 8 bits.
                             begin 
                                 next_estado = STOP; //Quiere decir que el proximo bit va a ser de STOP
                                 next_bit_count = 1'b0;
@@ -145,6 +153,6 @@ module Tx#(
     end
     
     //Instanciacion de modulos
-    baud_rate_gen baud_rate_gen(.o_tick(s_tick), .i_clock(i_clock), .i_reset(i_reset));
+//    baud_rate_gen baud_rate_gen(.o_tick(s_tick), .i_clock(i_clock), .i_reset(i_reset));
     
 endmodule

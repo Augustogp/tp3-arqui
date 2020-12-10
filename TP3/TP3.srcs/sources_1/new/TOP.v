@@ -37,7 +37,6 @@ module TOP#(
     );
     
     wire    [N_BITS_ADDR - 1 : 0]   wire_control_addr;
-    wire    [N_BITS_ADDR - 1 : 0]   wire_control_addr; 
     
     wire    [1 : 0]                     wire_selA;
     wire                                wire_selB;
@@ -52,7 +51,7 @@ module TOP#(
     wire                                wire_tick;
     wire    [N_BITS - 1 : 0]            i_instruction;
     
-    reg     [N_BITS - 1 : 0]            reg_Program_Control;
+    reg     [N_BITS_OPCODE - 1 : 0]            reg_Program_Control;
     reg     [N_BITS - 1 : 0]            reg_Program_Datapath;
     
     wire    [N_BITS_OPCODE - 1 : 0]     wire_Program_Control;
@@ -60,22 +59,22 @@ module TOP#(
     
     reg                                 tx_start_top;
     
-    assign  wire_Program_Control = reg_Program_Control;
-    assign  wire_Program_Datapath = reg_Program_Datapath;
+    assign  wire_Program_Control = i_instruction >> N_BITS_ADDR; // Para que quede el opcode
+    assign  wire_Program_Datapath = i_instruction & 16'b0000011111111111; // Para que quede el operando
     
     //ver si poner este always
-    always@(*) begin
-        reg_Program_Control     =  i_instruction & 16'b1111100000000000; // Para que quede el opcode
+    /*always@(*) begin
+        reg_Program_Control     =  N_BITS_ADDR >> (i_instruction & 16'b1111100000000000); // Para que quede el opcode
         reg_Program_Datapath    =  i_instruction & 16'b0000011111111111; // Para que quede el operando   
     end
-    
+    */
     always@(*) begin 
-        if( reg_Program_Control == 5'b00000) begin // Aca entraria la instruccion HALT
+        if( wire_Program_Control == 5'b00000) begin // Aca entraria la instruccion HALT
             tx_start_top = 1'b1;
         end
-        else begin
+      /*  else begin
             tx_start_top = 1'b0;
-        end
+        end*/
         
     end
     

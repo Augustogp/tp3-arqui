@@ -49,37 +49,42 @@ module Rx#(
     reg     [2:0]            next_estado;
     reg     [N_BITS_P-1:0]   bit_count, next_bit_count; // Registro para ver por cual de los 8 bits va
 
+    reg flag, next_flag;
 
     always@(posedge i_clock) begin
         if(i_reset) begin
             estado <= IDLE;
             contador <= 0;
             bit_count <= 0;
+            flag <= 0;
         end
         else begin 
             if(s_tick)
                 estado <= next_estado;
                 contador <= next_contador;
-                bit_count <= next_bit_count;                
+                bit_count <= next_bit_count;
+                flag <= next_flag;                
         end
     end
 
     always@ (posedge s_tick) begin
         //if(s_tick == 1)
         //begin
+        next_flag = flag;
             case(estado)
                 IDLE: //Esta en estado de IDLE (todavia no llego el tick 7)
                     begin
                         if(rx == 0)
                         begin
                             //contador = contador + 1'b1; //quiere decir que todavia no llego a los primeros 7 ticks
-                            if(contador == 4'b0111) 
+                            if(contador == 4'b0111 && flag == 2) 
                             begin
                                 rx_done_tick = 1'b0;
                                 next_estado = DATA; //Ya llego al punto medio, y empieza a tomar datos
                                 next_contador = 1'b0;
                                 next_bit_count = 1'b0; 
                                 dout = 1'b0;
+                                next_flag = next_flag + 1;
                             end
                             else 
                                 begin
@@ -90,6 +95,7 @@ module Rx#(
                         
                 DATA: //El contador ya llego a 7 y ahora se reinicia y empieza a tomar datos.
                     begin
+                        next_flag = 0;
                         next_contador = next_contador + 1'b1;
                         if(contador == 4'b1111) //si el contador llega a 15 ya se tiene el valor de un bit
                         begin
@@ -97,7 +103,7 @@ module Rx#(
                             dout = {dout[0 +: N_BITS-1 ],rx}; //Se va a ir concatenando hasta tener los 8 bits en dout 
                             //bit_count = bit_count + 1'b1; //Se dice que ya se concateno 1 bit mas
                             next_contador = next_contador + 1'b1; //Al ser contador de 4 bits, a los 15 se reinicia con el +1
-                            if(bit_count == 3'b111) //Si es 7 bit count significa que ya paso los 8 bits.
+                            if(bit_count == (N_BITS-1)) //Si es 7 bit count significa que ya paso los 8 bits.
                             begin 
                                 next_estado = STOP; //Quiere decir que el proximo bit va a ser de STOP
                                 next_bit_count = 1'b0;

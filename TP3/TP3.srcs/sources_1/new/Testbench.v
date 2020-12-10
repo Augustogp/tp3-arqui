@@ -38,11 +38,11 @@ module Testbench#(
         
         initial begin
             #10
+            i_clock_tb = 1;
+            #10
             i_reset_tb = 1;
             #1000
             i_reset_tb = 0;
-            #100
-            i_clock_tb = 1;
         end
         
         always

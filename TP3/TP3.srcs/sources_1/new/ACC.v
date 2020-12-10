@@ -36,7 +36,7 @@ module ACC#(
     
     reg     [N_BITS - 1 : 0]    acc;
         
-    always@(negedge i_clock)
+    always@(posedge i_clock)
         if(i_reset) begin
             o_acc <= 0;
         end
