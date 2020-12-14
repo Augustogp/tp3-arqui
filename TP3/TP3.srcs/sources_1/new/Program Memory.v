@@ -23,7 +23,7 @@ module Program_Memory#(
         //Parameters
        parameter    N_BITS_DATA = 16,
        parameter    N_BITS_ADDR = 11,
-       parameter    RAM_DEPTH = 8,
+       parameter    RAM_DEPTH = 10,
        parameter    INIT_FILE = "program.mem"                    // Specify name/location of RAM initialization file if using one (leave blank if not)
     )    
     (

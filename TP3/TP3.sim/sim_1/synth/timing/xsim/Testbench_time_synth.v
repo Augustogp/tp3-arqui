@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Dec 14 12:03:50 2020
+// Date        : Mon Dec 14 15:45:16 2020
 // Host        : PC-Augusto running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.sim/sim_1/synth/timing/xsim/Testbench_time_synth.v
@@ -58,7 +58,7 @@ module RAM32X1S_UNIQ_BASE_
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD16
+module RAM32X1S_HD1
    (O,
     A0,
     A1,
@@ -103,7 +103,7 @@ module RAM32X1S_HD16
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD17
+module RAM32X1S_HD10
    (O,
     A0,
     A1,
@@ -148,7 +148,7 @@ module RAM32X1S_HD17
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD18
+module RAM32X1S_HD11
    (O,
     A0,
     A1,
@@ -193,7 +193,7 @@ module RAM32X1S_HD18
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD19
+module RAM32X1S_HD12
    (O,
     A0,
     A1,
@@ -238,7 +238,7 @@ module RAM32X1S_HD19
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD20
+module RAM32X1S_HD13
    (O,
     A0,
     A1,
@@ -283,7 +283,7 @@ module RAM32X1S_HD20
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD21
+module RAM32X1S_HD14
    (O,
     A0,
     A1,
@@ -328,7 +328,7 @@ module RAM32X1S_HD21
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD22
+module RAM32X1S_HD15
    (O,
     A0,
     A1,
@@ -373,7 +373,7 @@ module RAM32X1S_HD22
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD23
+module RAM32X1S_HD2
    (O,
     A0,
     A1,
@@ -418,7 +418,7 @@ module RAM32X1S_HD23
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD24
+module RAM32X1S_HD3
    (O,
     A0,
     A1,
@@ -463,7 +463,7 @@ module RAM32X1S_HD24
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD25
+module RAM32X1S_HD4
    (O,
     A0,
     A1,
@@ -508,7 +508,7 @@ module RAM32X1S_HD25
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD26
+module RAM32X1S_HD5
    (O,
     A0,
     A1,
@@ -553,7 +553,7 @@ module RAM32X1S_HD26
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD27
+module RAM32X1S_HD6
    (O,
     A0,
     A1,
@@ -598,7 +598,7 @@ module RAM32X1S_HD27
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD28
+module RAM32X1S_HD7
    (O,
     A0,
     A1,
@@ -643,7 +643,7 @@ module RAM32X1S_HD28
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD29
+module RAM32X1S_HD8
    (O,
     A0,
     A1,
@@ -688,7 +688,7 @@ module RAM32X1S_HD29
         .WE(WE));
 endmodule
 
-module RAM32X1S_HD30
+module RAM32X1S_HD9
    (O,
     A0,
     A1,
@@ -909,7 +909,7 @@ module Control
   wire [4:0]i_Opcode_control;
   wire i_clock_c;
   wire i_reset_c;
-  wire [2:0]\^o_Addr ;
+  wire [3:0]\^o_Addr ;
   wire o_RdRam;
   wire [0:0]\^o_SelA ;
   wire o_SelB;
@@ -918,7 +918,7 @@ module Control
   wire wire_WrPc;
   wire [4:0]NLW_Instruction_Decoder_o_Op_UNCONNECTED;
   wire [1:1]NLW_Instruction_Decoder_o_SelA_UNCONNECTED;
-  wire [10:3]NLW_PC_out_addr_UNCONNECTED;
+  wire [10:4]NLW_PC_out_addr_UNCONNECTED;
 
   assign o_Addr[10] = \<const0> ;
   assign o_Addr[9] = \<const0> ;
@@ -927,8 +927,7 @@ module Control
   assign o_Addr[6] = \<const0> ;
   assign o_Addr[5] = \<const0> ;
   assign o_Addr[4] = \<const0> ;
-  assign o_Addr[3] = \<const0> ;
-  assign o_Addr[2:0] = \^o_Addr [2:0];
+  assign o_Addr[3:0] = \^o_Addr [3:0];
   assign o_Op[4] = \<const0> ;
   assign o_Op[3] = \<const0> ;
   assign o_Op[2] = \<const0> ;
@@ -962,7 +961,7 @@ module Control
        (.enable(wire_WrPc),
         .i_clock(i_clock_c),
         .i_reset(i_reset_c),
-        .out_addr({NLW_PC_out_addr_UNCONNECTED[10:3],\^o_Addr }));
+        .out_addr({NLW_PC_out_addr_UNCONNECTED[10:4],\^o_Addr }));
 endmodule
 
 (* N_BITS_ADDR = "11" *) (* N_BITS_DATA = "16" *) (* RAM_DEPTH = "8" *) 
@@ -1148,7 +1147,6 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
@@ -1156,7 +1154,7 @@ module Data_Memory
   (* ram_slice_end = "0" *) 
   RAM32X1S_UNIQ_BASE_ registers_reg_0_7_0_0
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1171,15 +1169,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "10" *) 
   (* ram_slice_end = "10" *) 
-  RAM32X1S_HD16 registers_reg_0_7_10_10
+  RAM32X1S_HD1 registers_reg_0_7_10_10
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1194,15 +1191,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "11" *) 
   (* ram_slice_end = "11" *) 
-  RAM32X1S_HD17 registers_reg_0_7_11_11
+  RAM32X1S_HD2 registers_reg_0_7_11_11
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1217,15 +1213,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "12" *) 
-  RAM32X1S_HD18 registers_reg_0_7_12_12
+  RAM32X1S_HD3 registers_reg_0_7_12_12
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1240,15 +1235,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "13" *) 
   (* ram_slice_end = "13" *) 
-  RAM32X1S_HD19 registers_reg_0_7_13_13
+  RAM32X1S_HD4 registers_reg_0_7_13_13
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1263,15 +1257,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "14" *) 
   (* ram_slice_end = "14" *) 
-  RAM32X1S_HD20 registers_reg_0_7_14_14
+  RAM32X1S_HD5 registers_reg_0_7_14_14
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1286,15 +1279,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "15" *) 
   (* ram_slice_end = "15" *) 
-  RAM32X1S_HD21 registers_reg_0_7_15_15
+  RAM32X1S_HD6 registers_reg_0_7_15_15
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1309,15 +1301,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "1" *) 
   (* ram_slice_end = "1" *) 
-  RAM32X1S_HD22 registers_reg_0_7_1_1
+  RAM32X1S_HD7 registers_reg_0_7_1_1
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1332,15 +1323,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "2" *) 
   (* ram_slice_end = "2" *) 
-  RAM32X1S_HD23 registers_reg_0_7_2_2
+  RAM32X1S_HD8 registers_reg_0_7_2_2
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1355,15 +1345,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "3" *) 
   (* ram_slice_end = "3" *) 
-  RAM32X1S_HD24 registers_reg_0_7_3_3
+  RAM32X1S_HD9 registers_reg_0_7_3_3
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1378,15 +1367,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "4" *) 
   (* ram_slice_end = "4" *) 
-  RAM32X1S_HD25 registers_reg_0_7_4_4
+  RAM32X1S_HD10 registers_reg_0_7_4_4
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1401,15 +1389,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "5" *) 
   (* ram_slice_end = "5" *) 
-  RAM32X1S_HD26 registers_reg_0_7_5_5
+  RAM32X1S_HD11 registers_reg_0_7_5_5
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1424,15 +1411,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "6" *) 
-  RAM32X1S_HD27 registers_reg_0_7_6_6
+  RAM32X1S_HD12 registers_reg_0_7_6_6
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1447,15 +1433,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "7" *) 
   (* ram_slice_end = "7" *) 
-  RAM32X1S_HD28 registers_reg_0_7_7_7
+  RAM32X1S_HD13 registers_reg_0_7_7_7
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1470,15 +1455,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "8" *) 
   (* ram_slice_end = "8" *) 
-  RAM32X1S_HD29 registers_reg_0_7_8_8
+  RAM32X1S_HD14 registers_reg_0_7_8_8
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1493,15 +1477,14 @@ module Data_Memory
   (* RTL_RAM_NAME = "registers" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
-  (* XILINX_REPORT_XFORM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "7" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "9" *) 
   (* ram_slice_end = "9" *) 
-  RAM32X1S_HD30 registers_reg_0_7_9_9
+  RAM32X1S_HD15 registers_reg_0_7_9_9
        (.A0(i_addr[0]),
-        .A1(1'b0),
+        .A1(i_addr[1]),
         .A2(i_addr[2]),
         .A3(1'b0),
         .A4(1'b0),
@@ -1556,13 +1539,13 @@ module Datapath
   Sel_A Sel_A
        (.i_alu(wire_Alu_selA),
         .i_dataMem(i_data_mem),
-        .i_se({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_signalExt[2],1'b0,i_signalExt[0]}),
+        .i_se({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_signalExt[2:0]}),
         .o_data(wire_selA_Acc),
         .selA(i_selA));
   (* N_BITS = "16" *) 
   Sel_B Sel_B
        (.i_dataMem(i_data_mem),
-        .i_se({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_signalExt[2],1'b0,i_signalExt[0]}),
+        .i_se({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_signalExt[2:0]}),
         .o_data(wire_selB_Alu),
         .selB(i_selB));
   (* N_BITS = "16" *) 
@@ -1613,7 +1596,7 @@ module Instruction_Decoder
   assign o_SelA[0] = \^o_SelA [0];
   GND GND
        (.G(\<const0> ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h0E)) 
     o_RdRam_INST_0
@@ -1621,7 +1604,7 @@ module Instruction_Decoder
         .I1(i_opcode[1]),
         .I2(i_opcode[0]),
         .O(o_RdRam));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \o_SelA[0]_INST_0 
@@ -1629,7 +1612,7 @@ module Instruction_Decoder
         .I1(i_opcode[0]),
         .I2(i_opcode[1]),
         .O(\^o_SelA ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     o_SelB_INST_0
@@ -1671,13 +1654,11 @@ module PC
   output [10:0]out_addr;
 
   wire \<const0> ;
-  wire \addr[0]_i_1_n_0 ;
-  wire \addr[1]_i_1_n_0 ;
-  wire \addr[2]_i_1_n_0 ;
   wire enable;
   wire i_clock;
   wire i_reset;
-  wire [2:0]\^out_addr ;
+  wire [3:0]\^out_addr ;
+  wire [3:0]p_0_in;
 
   assign out_addr[10] = \<const0> ;
   assign out_addr[9] = \<const0> ;
@@ -1686,61 +1667,75 @@ module PC
   assign out_addr[6] = \<const0> ;
   assign out_addr[5] = \<const0> ;
   assign out_addr[4] = \<const0> ;
-  assign out_addr[3] = \<const0> ;
-  assign out_addr[2:0] = \^out_addr [2:0];
+  assign out_addr[3:0] = \^out_addr [3:0];
   GND GND
        (.G(\<const0> ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \addr[0]_i_1 
+       (.I0(\^out_addr [0]),
+        .O(p_0_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \addr[0]_i_1 
-       (.I0(enable),
-        .I1(\^out_addr [0]),
-        .O(\addr[0]_i_1_n_0 ));
+    \addr[1]_i_1 
+       (.I0(\^out_addr [0]),
+        .I1(\^out_addr [1]),
+        .O(p_0_in[1]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h78)) 
-    \addr[1]_i_1 
-       (.I0(\^out_addr [0]),
-        .I1(enable),
-        .I2(\^out_addr [1]),
-        .O(\addr[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
     \addr[2]_i_1 
        (.I0(\^out_addr [0]),
         .I1(\^out_addr [1]),
-        .I2(enable),
-        .I3(\^out_addr [2]),
-        .O(\addr[2]_i_1_n_0 ));
+        .I2(\^out_addr [2]),
+        .O(p_0_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \addr[3]_i_1 
+       (.I0(\^out_addr [1]),
+        .I1(\^out_addr [0]),
+        .I2(\^out_addr [2]),
+        .I3(\^out_addr [3]),
+        .O(p_0_in[3]));
   FDRE #(
     .INIT(1'b0)) 
     \addr_reg[0] 
        (.C(i_clock),
-        .CE(1'b1),
-        .D(\addr[0]_i_1_n_0 ),
+        .CE(enable),
+        .D(p_0_in[0]),
         .Q(\^out_addr [0]),
         .R(i_reset));
   FDRE #(
     .INIT(1'b0)) 
     \addr_reg[1] 
        (.C(i_clock),
-        .CE(1'b1),
-        .D(\addr[1]_i_1_n_0 ),
+        .CE(enable),
+        .D(p_0_in[1]),
         .Q(\^out_addr [1]),
         .R(i_reset));
   FDRE #(
     .INIT(1'b0)) 
     \addr_reg[2] 
        (.C(i_clock),
-        .CE(1'b1),
-        .D(\addr[2]_i_1_n_0 ),
+        .CE(enable),
+        .D(p_0_in[2]),
         .Q(\^out_addr [2]),
+        .R(i_reset));
+  FDRE #(
+    .INIT(1'b0)) 
+    \addr_reg[3] 
+       (.C(i_clock),
+        .CE(enable),
+        .D(p_0_in[3]),
+        .Q(\^out_addr [3]),
         .R(i_reset));
 endmodule
 
 (* INIT_FILE = "program.mem" *) (* N_BITS_ADDR = "11" *) (* N_BITS_DATA = "16" *) 
-(* RAM_DEPTH = "8" *) 
+(* RAM_DEPTH = "10" *) 
 module Program_Memory
    (i_addr,
     i_clock,
@@ -1757,6 +1752,7 @@ module Program_Memory
   wire \reg_out[11]_i_1_n_0 ;
   wire \reg_out[12]_i_1_n_0 ;
   wire \reg_out[13]_i_1_n_0 ;
+  wire \reg_out[1]_i_1_n_0 ;
   wire \reg_out[2]_i_1_n_0 ;
 
   assign o_data[15] = \<const0> ;
@@ -1770,43 +1766,55 @@ module Program_Memory
   assign o_data[5] = \<const0> ;
   assign o_data[4] = \<const0> ;
   assign o_data[3] = \<const0> ;
-  assign o_data[2] = \^o_data [2];
-  assign o_data[1] = \<const0> ;
-  assign o_data[0] = \^o_data [0];
+  assign o_data[2:0] = \^o_data [2:0];
   GND GND
        (.G(\<const0> ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \reg_out[0]_i_1 
-       (.I0(i_addr[0]),
-        .I1(i_addr[1]),
+       (.I0(i_addr[2]),
+        .I1(i_addr[0]),
+        .I2(i_addr[1]),
         .O(\reg_out[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT3 #(
+    .INIT(8'h1F)) 
     \reg_out[11]_i_1 
-       (.I0(i_addr[1]),
+       (.I0(i_addr[2]),
         .I1(i_addr[0]),
+        .I2(i_addr[1]),
         .O(\reg_out[11]_i_1_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \reg_out[12]_i_1 
-       (.I0(i_addr[0]),
-        .O(\reg_out[12]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT3 #(
+    .INIT(8'hCB)) 
+    \reg_out[12]_i_1 
+       (.I0(i_addr[1]),
+        .I1(i_addr[2]),
+        .I2(i_addr[0]),
+        .O(\reg_out[12]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'h6A)) 
     \reg_out[13]_i_1 
+       (.I0(i_addr[2]),
+        .I1(i_addr[0]),
+        .I2(i_addr[1]),
+        .O(\reg_out[13]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'h20)) 
+    \reg_out[1]_i_1 
+       (.I0(i_addr[2]),
+        .I1(i_addr[1]),
+        .I2(i_addr[0]),
+        .O(\reg_out[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \reg_out[2]_i_1 
        (.I0(i_addr[0]),
         .I1(i_addr[1]),
-        .O(\reg_out[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \reg_out[2]_i_1 
-       (.I0(i_addr[1]),
-        .I1(i_addr[0]),
         .O(\reg_out[2]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -1815,7 +1823,7 @@ module Program_Memory
         .CE(1'b1),
         .D(\reg_out[0]_i_1_n_0 ),
         .Q(\^o_data [0]),
-        .R(i_addr[2]));
+        .R(i_addr[3]));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[11] 
@@ -1823,7 +1831,7 @@ module Program_Memory
         .CE(1'b1),
         .D(\reg_out[11]_i_1_n_0 ),
         .Q(\^o_data [11]),
-        .R(i_addr[2]));
+        .R(i_addr[3]));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[12] 
@@ -1831,7 +1839,7 @@ module Program_Memory
         .CE(1'b1),
         .D(\reg_out[12]_i_1_n_0 ),
         .Q(\^o_data [12]),
-        .R(i_addr[2]));
+        .R(i_addr[3]));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[13] 
@@ -1839,7 +1847,15 @@ module Program_Memory
         .CE(1'b1),
         .D(\reg_out[13]_i_1_n_0 ),
         .Q(\^o_data [13]),
-        .R(i_addr[2]));
+        .R(i_addr[3]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_reg[1] 
+       (.C(i_clock),
+        .CE(1'b1),
+        .D(\reg_out[1]_i_1_n_0 ),
+        .Q(\^o_data [1]),
+        .R(i_addr[3]));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[2] 
@@ -1847,7 +1863,7 @@ module Program_Memory
         .CE(1'b1),
         .D(\reg_out[2]_i_1_n_0 ),
         .Q(\^o_data [2]),
-        .R(i_addr[2]));
+        .R(i_addr[3]));
 endmodule
 
 (* N_BITS = "16" *) 
@@ -1926,13 +1942,14 @@ module Sel_A
         .I2(i_alu[15]),
         .I3(selA[0]),
         .O(o_data[15]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT5 #(
+    .INIT(32'h30BB3088)) 
     \o_data[1]_INST_0 
-       (.I0(i_dataMem[1]),
-        .I1(selA[1]),
+       (.I0(i_se[1]),
+        .I1(selA[0]),
         .I2(i_alu[1]),
-        .I3(selA[0]),
+        .I3(selA[1]),
+        .I4(i_dataMem[1]),
         .O(o_data[1]));
   LUT5 #(
     .INIT(32'h30BB3088)) 
@@ -2017,7 +2034,7 @@ module Sel_B
   wire [15:0]o_data;
   wire selB;
 
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \o_data[0]_INST_0 
@@ -2025,56 +2042,57 @@ module Sel_B
         .I1(i_dataMem[0]),
         .I2(selB),
         .O(o_data[0]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[10]_INST_0 
        (.I0(i_dataMem[10]),
         .I1(selB),
         .O(o_data[10]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[11]_INST_0 
        (.I0(i_dataMem[11]),
         .I1(selB),
         .O(o_data[11]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[12]_INST_0 
        (.I0(i_dataMem[12]),
         .I1(selB),
         .O(o_data[12]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[13]_INST_0 
        (.I0(i_dataMem[13]),
         .I1(selB),
         .O(o_data[13]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[14]_INST_0 
        (.I0(i_dataMem[14]),
         .I1(selB),
         .O(o_data[14]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[15]_INST_0 
        (.I0(i_dataMem[15]),
         .I1(selB),
         .O(o_data[15]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_data[1]_INST_0 
-       (.I0(i_dataMem[1]),
-        .I1(selB),
-        .O(o_data[1]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \o_data[1]_INST_0 
+       (.I0(i_se[1]),
+        .I1(i_dataMem[1]),
+        .I2(selB),
+        .O(o_data[1]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \o_data[2]_INST_0 
@@ -2082,49 +2100,49 @@ module Sel_B
         .I1(i_dataMem[2]),
         .I2(selB),
         .O(o_data[2]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[3]_INST_0 
        (.I0(i_dataMem[3]),
         .I1(selB),
         .O(o_data[3]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[4]_INST_0 
        (.I0(i_dataMem[4]),
         .I1(selB),
         .O(o_data[4]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[5]_INST_0 
        (.I0(i_dataMem[5]),
         .I1(selB),
         .O(o_data[5]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[6]_INST_0 
        (.I0(i_dataMem[6]),
         .I1(selB),
         .O(o_data[6]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[7]_INST_0 
        (.I0(i_dataMem[7]),
         .I1(selB),
         .O(o_data[7]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[8]_INST_0 
        (.I0(i_dataMem[8]),
         .I1(selB),
         .O(o_data[8]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \o_data[9]_INST_0 
@@ -2172,14 +2190,14 @@ module TOP
   wire wire_WrAcc;
   wire wire_WrRam;
   wire [15:0]wire_outDataMem;
-  wire [2:0]wire_proMemAddr;
+  wire [3:0]wire_proMemAddr;
   wire [0:0]wire_selA;
   wire wire_selB;
   wire wire_tick;
-  wire [10:3]NLW_Control_o_Addr_UNCONNECTED;
+  wire [10:4]NLW_Control_o_Addr_UNCONNECTED;
   wire [4:0]NLW_Control_o_Op_UNCONNECTED;
   wire [1:1]NLW_Control_o_SelA_UNCONNECTED;
-  wire [15:1]NLW_Program_Memory_o_data_UNCONNECTED;
+  wire [15:3]NLW_Program_Memory_o_data_UNCONNECTED;
 
 initial begin
  $sdf_annotate("Testbench_time_synth.sdf",,,,"tool_control");
@@ -2191,7 +2209,7 @@ end
        (.i_Opcode_control({1'b0,1'b0,i_instruction[13:11]}),
         .i_clock_c(o_clk_OBUF),
         .i_reset_c(i_reset_top_IBUF),
-        .o_Addr({NLW_Control_o_Addr_UNCONNECTED[10:3],wire_proMemAddr}),
+        .o_Addr({NLW_Control_o_Addr_UNCONNECTED[10:4],wire_proMemAddr}),
         .o_Op(NLW_Control_o_Op_UNCONNECTED[4:0]),
         .o_RdRam(wire_RdRam),
         .o_SelA({NLW_Control_o_SelA_UNCONNECTED[1],wire_selA}),
@@ -2202,7 +2220,7 @@ end
   (* N_BITS_DATA = "16" *) 
   (* RAM_DEPTH = "8" *) 
   Data_Memory Data_Memory
-       (.i_addr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_instruction[2],1'b0,i_instruction[0]}),
+       (.i_addr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_instruction[2:0]}),
         .i_clock(o_clk_OBUF),
         .i_data(wire_IndataMem),
         .i_rd(wire_RdRam),
@@ -2220,14 +2238,14 @@ end
         .i_reset_D(i_reset_top_IBUF),
         .i_selA({i_instruction[13],wire_selA}),
         .i_selB(wire_selB),
-        .i_signalExt({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_instruction[2],1'b0,i_instruction[0]}),
+        .i_signalExt({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_instruction[2:0]}),
         .o_data_mem(wire_IndataMem));
   (* INIT_FILE = "program.mem" *) 
   (* N_BITS_ADDR = "11" *) 
   (* N_BITS_DATA = "16" *) 
-  (* RAM_DEPTH = "8" *) 
+  (* RAM_DEPTH = "10" *) 
   Program_Memory Program_Memory
-       (.i_addr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,wire_proMemAddr}),
+       (.i_addr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,wire_proMemAddr}),
         .i_clock(o_clk_OBUF),
         .o_data({NLW_Program_Memory_o_data_UNCONNECTED[15:14],i_instruction}));
   (* DATA = "3'b001" *) 
@@ -2360,7 +2378,7 @@ module Tx
         .I1(s_tick),
         .I2(estado),
         .O(\FSM_onehot_estado[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \FSM_onehot_estado[1]_i_1 
@@ -2368,7 +2386,7 @@ module Tx
         .I1(s_tick),
         .I2(\FSM_onehot_estado_reg_n_0_[1] ),
         .O(\FSM_onehot_estado[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \FSM_onehot_estado[2]_i_1 
@@ -2443,7 +2461,7 @@ module Tx
         .I4(dout_tx_i_4_n_0),
         .I5(next_estado[2]),
         .O(\FSM_onehot_next_estado[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'hFFFF7FFF)) 
     \FSM_onehot_next_estado[2]_i_2 
@@ -2579,7 +2597,7 @@ module Tx
         .I3(dout_tx_reg_i_6_n_0),
         .I4(\FSM_onehot_estado_reg_n_0_[1] ),
         .O(dout_tx_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'h00000100)) 
     dout_tx_i_3
@@ -2589,7 +2607,7 @@ module Tx
         .I3(tx_start),
         .I4(contador_tx[3]),
         .O(dout_tx_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     dout_tx_i_4
@@ -2692,7 +2710,7 @@ module Tx
         .I4(\next_bit_count[3]_i_3_n_0 ),
         .I5(\FSM_onehot_estado_reg_n_0_[2] ),
         .O(\next_bit_count[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \next_bit_count[3]_i_2 
@@ -2752,7 +2770,7 @@ module Tx
         .I4(dout_tx_i_3_n_0),
         .I5(\FSM_onehot_estado_reg_n_0_[2] ),
         .O(next_contador_tx[0]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'h66666660)) 
     \next_contador_tx[1]_i_1 
@@ -2772,7 +2790,7 @@ module Tx
         .I4(\next_contador_tx[2]_i_2_n_0 ),
         .I5(contador_tx[2]),
         .O(next_contador_tx[2]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \next_contador_tx[2]_i_2 
@@ -2789,7 +2807,7 @@ module Tx
         .I4(\next_contador_tx[3]_i_2_n_0 ),
         .I5(contador_tx[3]),
         .O(next_contador_tx[3]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \next_contador_tx[3]_i_2 
@@ -2829,7 +2847,7 @@ module Tx
         .D(next_contador_tx[3]),
         .Q(\next_contador_tx_reg_n_0_[3] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     next_o_tx_done_i_1
@@ -2906,21 +2924,21 @@ module alu
   wire [15:0]p_0_in;
   wire [3:3]\NLW_out[15]_INST_0_i_1_CO_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[0]_INST_0 
        (.I0(p_0_in[0]),
         .I1(operacion[2]),
         .O(out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[10]_INST_0 
        (.I0(p_0_in[10]),
         .I1(operacion[2]),
         .O(out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[11]_INST_0 
@@ -2964,28 +2982,28 @@ module alu
         .I1(operacion[1]),
         .I2(datoA[8]),
         .O(\out[11]_INST_0_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[12]_INST_0 
        (.I0(p_0_in[12]),
         .I1(operacion[2]),
         .O(out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[13]_INST_0 
        (.I0(p_0_in[13]),
         .I1(operacion[2]),
         .O(out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[14]_INST_0 
        (.I0(p_0_in[14]),
         .I1(operacion[2]),
         .O(out[14]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[15]_INST_0 
@@ -3029,21 +3047,21 @@ module alu
         .I1(operacion[1]),
         .I2(datoA[12]),
         .O(\out[15]_INST_0_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[1]_INST_0 
        (.I0(p_0_in[1]),
         .I1(operacion[2]),
         .O(out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[2]_INST_0 
        (.I0(p_0_in[2]),
         .I1(operacion[2]),
         .O(out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[3]_INST_0 
@@ -3085,28 +3103,28 @@ module alu
     \out[3]_INST_0_i_5 
        (.I0(datoB[0]),
         .O(\out[3]_INST_0_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[4]_INST_0 
        (.I0(p_0_in[4]),
         .I1(operacion[2]),
         .O(out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[5]_INST_0 
        (.I0(p_0_in[5]),
         .I1(operacion[2]),
         .O(out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[6]_INST_0 
        (.I0(p_0_in[6]),
         .I1(operacion[2]),
         .O(out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[7]_INST_0 
@@ -3150,14 +3168,14 @@ module alu
         .I1(operacion[1]),
         .I2(datoA[4]),
         .O(\out[7]_INST_0_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[8]_INST_0 
        (.I0(p_0_in[8]),
         .I1(operacion[2]),
         .O(out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \out[9]_INST_0 
@@ -3217,14 +3235,14 @@ module baud_rate_gen
     \reg_contador[0]_i_1 
        (.I0(\reg_contador_reg_n_0_[0] ),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \reg_contador[1]_i_1 
        (.I0(\reg_contador_reg_n_0_[0] ),
         .I1(reg_contador_reg[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \reg_contador[2]_i_1 
@@ -3232,7 +3250,7 @@ module baud_rate_gen
         .I1(reg_contador_reg[1]),
         .I2(reg_contador_reg[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \reg_contador[3]_i_1 
@@ -3241,7 +3259,7 @@ module baud_rate_gen
         .I2(reg_contador_reg[2]),
         .I3(reg_contador_reg[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \reg_contador[4]_i_1 
@@ -3261,7 +3279,7 @@ module baud_rate_gen
         .I4(reg_contador_reg[4]),
         .I5(reg_contador_reg[5]),
         .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \reg_contador[6]_i_1 
@@ -3275,7 +3293,7 @@ module baud_rate_gen
         .I1(o_tick_i_2_n_0),
         .I2(reg_contador_reg[7]),
         .O(\reg_contador[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \reg_contador[7]_i_2 

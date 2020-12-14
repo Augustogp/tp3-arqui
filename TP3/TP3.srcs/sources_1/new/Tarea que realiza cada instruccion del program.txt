@@ -1,0 +1,9 @@
+Load inmediato de un 4
+Store en posicion 1
+Load inmediato de un 1
+Suma con la variable en posicion 1
+Suma inmediata con un 5
+Resta inmediata con un 3
+Resta con la variable en posicion 1 (4)
+Load de la variable en posicion 2
+Halt
