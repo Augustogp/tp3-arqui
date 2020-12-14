@@ -34,7 +34,7 @@ module ACC#(
         output  reg    [N_BITS - 1 : 0]    o_acc
     );
     
-    reg     [N_BITS - 1 : 0]    acc;
+  //  reg     [N_BITS - 1 : 0]    acc;
         
     always@(posedge i_clock)
         if(i_reset) begin

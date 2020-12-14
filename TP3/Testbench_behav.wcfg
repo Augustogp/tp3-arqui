@@ -11,18 +11,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="942683fs"></ZoomStartTime>
-      <ZoomEndTime time="1255111fs"></ZoomEndTime>
-      <Cursor1Time time="2000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2000000001fs"></ZoomEndTime>
+      <Cursor1Time time="2000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="132"></NameColumnWidth>
+      <NameColumnWidth column_width="128"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="50" />
+   <WVObjectSize size="51" />
    <wvobject fp_name="/Testbench/i_clock_tb" type="logic">
       <obj_property name="ElementShortName">i_clock_tb</obj_property>
       <obj_property name="ObjectShortName">i_clock_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/TOP/clk_out" type="logic">
+      <obj_property name="ElementShortName">clk_out</obj_property>
+      <obj_property name="ObjectShortName">clk_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/locked" type="logic">
+      <obj_property name="ElementShortName">locked</obj_property>
+      <obj_property name="ObjectShortName">locked</obj_property>
    </wvobject>
    <wvobject fp_name="/Testbench/i_reset_tb" type="logic">
       <obj_property name="ElementShortName">i_reset_tb</obj_property>
@@ -161,12 +169,6 @@
    <wvobject fp_name="/Testbench/TOP/Datapath/ACC/o_acc" type="array">
       <obj_property name="ElementShortName">o_acc[15:0]</obj_property>
       <obj_property name="ObjectShortName">o_acc[15:0]</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Testbench/TOP/Datapath/ACC/acc" type="array">
-      <obj_property name="ElementShortName">acc[15:0]</obj_property>
-      <obj_property name="ObjectShortName">acc[15:0]</obj_property>
       <obj_property name="CustomSignalColor">#808080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>

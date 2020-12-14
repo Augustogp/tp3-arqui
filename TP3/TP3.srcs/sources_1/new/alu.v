@@ -42,7 +42,7 @@ module alu#(
             5'b00101 : out = datoA + datoB;
             5'b00110 : out = datoA - datoB;
             5'b00111 : out = datoA - datoB;
-            default : out = out; 
+            default : out = 0; 
         endcase
        
 endmodule

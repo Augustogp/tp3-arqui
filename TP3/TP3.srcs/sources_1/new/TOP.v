@@ -31,8 +31,11 @@ module TOP#(
     (
         input   wire                        i_clock_top,
         input   wire                        i_reset_top,
+        input   wire                        i_reset_clk,
         output  wire                        o_dout_tx_top,
-        output  wire                        o_tx_done_top
+        output  wire                        o_tx_done_top,
+        output  wire                        o_locked,
+        output  wire                        o_clk
             
     );
     
@@ -58,9 +61,12 @@ module TOP#(
     wire    [N_BITS_PC - 1 : 0]         wire_Program_Datapath;
     
     reg                                 tx_start_top;
+    wire                                clk_out;
+
     
     assign  wire_Program_Control = i_instruction >> N_BITS_ADDR; // Para que quede el opcode
     assign  wire_Program_Datapath = i_instruction & 16'b0000011111111111; // Para que quede el operando
+    assign  o_clk = clk_out;
     
     //ver si poner este always
     /*always@(*) begin
@@ -68,18 +74,27 @@ module TOP#(
         reg_Program_Datapath    =  i_instruction & 16'b0000011111111111; // Para que quede el operando   
     end
     */
+    
     always@(*) begin 
         if( wire_Program_Control == 5'b00000) begin // Aca entraria la instruccion HALT
             tx_start_top = 1'b1;
         end
-      /*  else begin
+        else begin
             tx_start_top = 1'b0;
-        end*/
+        end
         
     end
     
+    
+    clk_wiz_0 clock_wiz(
+        .clk_out1(clk_out),
+        .reset(i_reset_clk),
+        .locked(o_locked),
+        .clk_in1(i_clock_top)
+    );
+        
     Control Control(
-        .i_clock_c(i_clock_top),
+        .i_clock_c(clk_out),
         .i_reset_c(i_reset_top),
         .i_Opcode_control(wire_Program_Control),
         .o_SelA(wire_selA),
@@ -92,7 +107,7 @@ module TOP#(
     );
     
     Datapath Datapath(
-        .i_clock_D(i_clock_top),
+        .i_clock_D(clk_out),
         .i_reset_D(i_reset_top),
         .i_data_mem(wire_outDataMem),
         .i_signalExt(wire_Program_Datapath),
@@ -108,14 +123,14 @@ module TOP#(
         .i_addr(wire_Program_Datapath),
         .i_wr(wire_WrRam),
         .i_rd(wire_RdRam),
-        .i_clock(i_clock_top),
+        .i_clock(clk_out),
         .i_reset(i_reset_top),
         .o_data(wire_outDataMem)
     );
     
     Program_Memory Program_Memory(
         .i_addr(wire_proMemAddr),
-        .i_clock(i_clock_top),  
+        .i_clock(clk_out),  
         .o_data(i_instruction)
     );
     
@@ -123,14 +138,14 @@ module TOP#(
         .s_tick(wire_tick),
         .tx(wire_IndataMem),    // La entrada del transmisor va a ser la salida del acumulador 
         .tx_start(tx_start_top),            //Falta el tx start, se tiene que pasar cuando se terminen las instrucciones
-        .i_clock(i_clock_top),
+        .i_clock(clk_out),
         .i_reset(i_reset_top),
         .dout_tx(o_dout_tx_top), //La salida del tx es la entrada del receptor externo
         .o_tx_done(o_tx_done_top)
     );
     
     baud_rate_gen baud_rate_gen(
-        .i_clock(i_clock_top),     
+        .i_clock(clk_out),     
         .i_reset(i_reset_top), 
         .o_tick(wire_tick)
     );
