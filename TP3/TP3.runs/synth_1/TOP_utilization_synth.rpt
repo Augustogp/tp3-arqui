@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Dec 14 11:04:31 2020
+| Date         : Mon Dec 14 11:34:09 2020
 | Host         : PC-Augusto running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
 | Design       : TOP
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |   88 |     0 |     20800 |  0.42 |
-|   LUT as Logic             |   72 |     0 |     20800 |  0.35 |
+| Slice LUTs*                |  110 |     0 |     20800 |  0.53 |
+|   LUT as Logic             |   94 |     0 |     20800 |  0.45 |
 |   LUT as Memory            |   16 |     0 |      9600 |  0.17 |
 |     LUT as Distributed RAM |   16 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
@@ -152,16 +152,16 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   73 |        Flop & Latch |
-| LUT5     |   39 |                 LUT |
-| LUT6     |   19 |                 LUT |
+| LUT2     |   42 |                 LUT |
+| LUT3     |   31 |                 LUT |
+| LUT6     |   20 |                 LUT |
+| LUT4     |   18 |                 LUT |
 | RAMS32   |   16 |  Distributed Memory |
-| LUT4     |   11 |                 LUT |
-| LUT3     |    8 |                 LUT |
-| LUT2     |    6 |                 LUT |
+| LUT5     |    9 |                 LUT |
 | OBUF     |    4 |                  IO |
 | CARRY4   |    4 |          CarryLogic |
+| LUT1     |    3 |                 LUT |
 | MUXF7    |    2 |               MuxFx |
-| LUT1     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+

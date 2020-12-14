@@ -43,6 +43,8 @@ module Testbench#(
             
             #0
             i_clock_tb = 0;
+            #10
+            i_reset_tb = 1;
             #100
             i_reset_clk = 1;
             #60
@@ -50,13 +52,9 @@ module Testbench#(
             while(locked != 1)
             begin
                 #5
-                i_reset_tb = 0; 
-            end
-            #10
-            i_clock_tb = 1;
-            #10
-            i_reset_tb = 1;
-            #1000
+                i_reset_tb = 1; 
+            end         
+            #100
             i_reset_tb = 0;
         end
         
