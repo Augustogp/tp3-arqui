@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Dec 14 15:45:16 2020
+// Date        : Mon Dec 14 16:34:39 2020
 // Host        : PC-Augusto running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/augus/Documents/Git/tp3-arqui/TP3/TP3.sim/sim_1/synth/timing/xsim/Testbench_time_synth.v
@@ -971,14 +971,12 @@ module Data_Memory
     i_wr,
     i_rd,
     i_clock,
-    i_reset,
     o_data);
   input [15:0]i_data;
   input [10:0]i_addr;
   input i_wr;
   input i_rd;
   input i_clock;
-  input i_reset;
   output [15:0]o_data;
 
   wire [10:0]i_addr;
@@ -2224,7 +2222,6 @@ end
         .i_clock(o_clk_OBUF),
         .i_data(wire_IndataMem),
         .i_rd(wire_RdRam),
-        .i_reset(1'b0),
         .i_wr(wire_WrRam),
         .o_data(wire_outDataMem));
   (* N_BITS = "16" *) 

@@ -54,9 +54,7 @@ module TOP#(
     wire                                wire_tick;
     wire    [N_BITS - 1 : 0]            i_instruction;
     
-    reg     [N_BITS_OPCODE - 1 : 0]            reg_Program_Control;
-    reg     [N_BITS - 1 : 0]            reg_Program_Datapath;
-    
+
     wire    [N_BITS_OPCODE - 1 : 0]     wire_Program_Control;
     wire    [N_BITS_PC - 1 : 0]         wire_Program_Datapath;
     
@@ -124,7 +122,6 @@ module TOP#(
         .i_wr(wire_WrRam),
         .i_rd(wire_RdRam),
         .i_clock(clk_out),
-        .i_reset(i_reset_top),
         .o_data(wire_outDataMem)
     );
     

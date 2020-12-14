@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="2000000001fs"></ZoomEndTime>
-      <Cursor1Time time="2000000000fs"></Cursor1Time>
+      <ZoomStartTime time="719400fs"></ZoomStartTime>
+      <ZoomEndTime time="925201fs"></ZoomEndTime>
+      <Cursor1Time time="730000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="128"></NameColumnWidth>
+      <NameColumnWidth column_width="124"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="51" />
+   <WVObjectSize size="49" />
    <wvobject fp_name="/Testbench/i_clock_tb" type="logic">
       <obj_property name="ElementShortName">i_clock_tb</obj_property>
       <obj_property name="ObjectShortName">i_clock_tb</obj_property>
@@ -76,12 +76,6 @@
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Testbench/TOP/reg_Program_Control" type="array">
-      <obj_property name="ElementShortName">reg_Program_Control[4:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_Program_Control[4:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/Testbench/TOP/wire_Program_Control" type="array">
       <obj_property name="ElementShortName">wire_Program_Control[4:0]</obj_property>
@@ -199,12 +193,6 @@
    <wvobject fp_name="/Testbench/TOP/Data_Memory/i_clock" type="logic">
       <obj_property name="ElementShortName">i_clock</obj_property>
       <obj_property name="ObjectShortName">i_clock</obj_property>
-      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Testbench/TOP/Data_Memory/i_reset" type="logic">
-      <obj_property name="ElementShortName">i_reset</obj_property>
-      <obj_property name="ObjectShortName">i_reset</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>

@@ -33,7 +33,6 @@ module Data_Memory#(
         input   wire                             i_wr,
         input   wire                             i_rd,
         input   wire                             i_clock,
-        input   wire                             i_reset,
 
         //Outputs
         output  wire    [N_BITS_DATA - 1 : 0]    o_data
